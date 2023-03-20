@@ -3,9 +3,8 @@
 
 
 ![Схема работы](Image/ImageOne.jpg)
-![Схема работы](Image/ImageThree.jpg)
 ![Схема работы](Image/ImageTwo.jpg)
-
+![Схема работы](Image/ImageThree.jpg)
 
 
 
