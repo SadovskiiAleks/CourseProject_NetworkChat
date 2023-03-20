@@ -2,9 +2,9 @@
 
 
 
-* [Ссылка](Image/ImageOne.jpg)
-* [Ссылка](Image/ImageThree.jpg)
-* [Ссылка](Image/ImageTwo.jpg)
+![Схема работы](Image/ImageOne.jpg)
+![Схема работы](Image/ImageThree.jpg)
+![Схема работы](Image/ImageTwo.jpg)
 
 
 
