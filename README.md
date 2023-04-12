@@ -2,7 +2,7 @@
 
 
 
-![Схема работы](Image/ImageOne.jpg)
+![Схема работы](Image/ImageOne.jpeg)
 
 # Архитектура приложения
 
