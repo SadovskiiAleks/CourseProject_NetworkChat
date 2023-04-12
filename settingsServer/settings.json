@@ -1,0 +1,8 @@
+{
+  "port": 8099,
+  "numberOfMessageInMemory": 20,
+  "ip": "localhost",
+  "locationOfLog": "A:\\HomeWorkNetology\\CourseProject_NetworkChat\\logs\\",
+  "setOne": ["123", "456"],
+  "setTwo": true
+}
