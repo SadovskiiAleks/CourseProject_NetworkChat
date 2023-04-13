@@ -5,11 +5,11 @@ import java.io.IOException;
 
 public class LogClient {
     private String fileWay;
-    private String fileName = "file.log";
+    private String fileName = "fileOfClient1.log";
     FileWriter writer;
 
     public LogClient(String fileWay) {
-        this.fileWay = fileWay + fileName;
+        this.fileWay = fileWay;
         try {
             FileWriter writer = new FileWriter(this.fileWay, true);
             this.writer = writer;

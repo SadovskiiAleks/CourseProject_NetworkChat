@@ -27,7 +27,7 @@ public class TestClient {
 
         // given:
         SettingsOfClient settings = new SettingsOfClient();
-        settings.readFromJson("settingsClient/settings.json");
+        settings.readFromJson("settingsClient/settingsClient1.json");
 
         // when:
         String answer = settings.getIp();
@@ -41,7 +41,7 @@ public class TestClient {
 
         // given:
         SettingsOfClient settings = new SettingsOfClient();
-        settings.readFromJson("settingsClient/settings.json");
+        settings.readFromJson("settingsClient/settingsClient1.json");
 
         // when:
         String answer = settings.getIp();

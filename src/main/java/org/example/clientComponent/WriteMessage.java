@@ -7,8 +7,10 @@ import java.util.Date;
 public class WriteMessage extends Thread {
     private ClientTread clientTread;
     private SimpleDateFormat simpleDateFormat;
+    public static LogClient log;
 
-    public WriteMessage(ClientTread clientTread) {
+    public WriteMessage(ClientTread clientTread, LogClient log) {
+        this.log = log;
         this.clientTread = clientTread;
     }
 
@@ -25,7 +27,7 @@ public class WriteMessage extends Thread {
                 userWord = clientTread.getInputUser().readLine();
 
                 if (userWord.equals("/exit")) {
-                    Client.log.addLog( "Пользователь покинул чат" + "\n" +"\n");
+                    log.addLog("Пользователь покинул чат" + "\n" + "\n");
 
                     clientTread.getOut().write("/exit");
                     clientTread.getOut().flush();
@@ -33,7 +35,7 @@ public class WriteMessage extends Thread {
                     break;
                 } else {
 
-                    Client.log.addLog("Отправлено - (" + clientTread.getdTime() + ") " + clientTread.getNickname() + ": " + userWord + "\n");
+                    log.addLog("Отправлено - (" + clientTread.getdTime() + ") " + clientTread.getNickname() + ": " + userWord + "\n");
 
                     clientTread.getOut().write("(" + clientTread.getdTime() + ") " + clientTread.getNickname() + ": " + userWord + "\n");
                 }

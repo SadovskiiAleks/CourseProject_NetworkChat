@@ -21,7 +21,7 @@ public class Server {
         //Настройка подключения к серверу
         ServerSocket server = new ServerSocket(settings.getPort());
 
-        // Логирование данных в file.log
+        // Логирование данных в fileOfClient1.log
         log = new Log(settings.getLocationOfLog());
 
         memory = new MemoryOfMessage().setNumberOfMessage(settings.getNumberOfMessageInMemory());

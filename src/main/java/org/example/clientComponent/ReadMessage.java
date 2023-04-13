@@ -4,9 +4,11 @@ import java.io.IOException;
 
 public class ReadMessage extends Thread {
     private ClientTread clientTread;
+    public static LogClient log;
 
-    public ReadMessage(ClientTread clientTread) {
+    public ReadMessage(ClientTread clientTread, LogClient log) {
         this.clientTread = clientTread;
+        this.log = log;
     }
 
     @Override
@@ -21,7 +23,7 @@ public class ReadMessage extends Thread {
                     clientTread.downService();
                     break;
                 }
-                Client.log.addLog("Получено сообщение - " + str + "\n");
+                log.addLog("Получено сообщение - " + str + "\n");
                 System.out.println(str);
             }
         } catch (IOException e) {

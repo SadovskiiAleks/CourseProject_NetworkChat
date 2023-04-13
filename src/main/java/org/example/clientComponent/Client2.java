@@ -1,15 +1,13 @@
 package org.example.clientComponent;
 
-import org.example.serverComponent.Log;
-
-public class Client {
+public class Client2 {
     public static LogClient log;
 
     public static void main(String[] args) {
 
         //Считать настройки с файла
         SettingsOfClient settings = new SettingsOfClient();
-        settings.readFromJson("settingsClient/settingsClient1.json");
+        settings.readFromJson("settingsClient/settingsClient2.json");
 
         // Логирование данных в fileOfClient1.log
         log = new LogClient(settings.getLocationOfLog());

@@ -30,7 +30,7 @@ public class TestServer {
 
         // given:
         SettingsOfServer settings = new SettingsOfServer();
-        settings.readFromJson("settingsServer/settings.json");
+        settings.readFromJson("settingsServer/settingsClient1.json");
 
         // when:
         String answer = settings.getIp();
@@ -38,7 +38,6 @@ public class TestServer {
         // then:
         Assertions.assertEquals("localhost",answer);
     }
-
 
     //Тестирование добавление потока в лист
     public static LinkedList<ServerTread> serverList = new LinkedList<>();

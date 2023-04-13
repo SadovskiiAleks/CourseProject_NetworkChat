@@ -19,10 +19,14 @@ public class ClientTread {
     private Date time;
     private String dTime;
 
-    public ClientTread(String ipUser, int port) {
+    public static LogClient log;
+
+    public ClientTread(String ipUser, int port, LogClient log) {
 
         this.ipUser = ipUser;
         this.port = port;
+
+        this.log = log;
 
         try {
             this.socket = new Socket(ipUser, port);
@@ -36,8 +40,8 @@ public class ClientTread {
             out = new BufferedWriter(new OutputStreamWriter(socket.getOutputStream()));
 
             this.pressNickname();
-            new ReadMessage(this).start();
-            new WriteMessage(this).start();
+            new ReadMessage(this, log).start();
+            new WriteMessage(this, log).start();
 
         } catch (IOException e) {
 
@@ -50,7 +54,7 @@ public class ClientTread {
         System.out.println("Введите свое имя: ");
         try {
             nickname = inputUser.readLine();
-            Client.log.addLog("Пользователь _" + nickname + "_ зашел в чат " + new Date() + "\n");
+            log.addLog("Пользователь _" + nickname + "_ зашел в чат " + new Date() + "\n");
             out.write("Здравствуйте: " + nickname + "\n");
             out.flush();
         } catch (IOException e) {
